@@ -1,29 +1,21 @@
 try:
-   a = float(input('enter your first number'))
-   b = float(input('enter your second number'))
-   ab = input('enter an operator(/,*,-,+)').strip()
-   
-   if ab not in ('/', '*', '-', '+'):
-        print("invalid operator input")
-   elif ab == '/'and b == 0:
-        print('number not divisible by zero')
-   else:
-    if ab == '/':
-        print(a / b)
-    elif ab == '*':
-        print(a * b)
-    elif ab == '-':
-        print(a - b)
-    elif ab == '+':
-        print(a + b)
+    while True:
+            a = float(input('first number'))
+            b = float(input('second number'))
+            ab = input('enter an operator(/, *, -, +)')
+            if ab == '/' and b == 0:
+                print("erro, can not devide by zero")
+            elif ab not in ('/', '*', '-', '+'):
+                print('error')
+            elif ab == '/':
+                print(a / b)
+            elif ab == '*':
+                print(a * b)
+            elif ab == '-':
+                print(a - b)
+            elif ab == '+':
+                print(a + b)
+            break
 except ValueError:
-   print("error, please enter correct value")
-
-
-
-
-
-
-
-
-
+    print("error, enter an integer or float")
+    
